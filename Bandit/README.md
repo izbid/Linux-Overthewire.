@@ -1,6 +1,6 @@
 The Bandit wargame, found at : https://overthewire.org/wargames/bandit/
 
-The files numbered 0,1,2 etc contains the password which represents the solution  at each level in the game.
+The files numbered 0,1,2 etc contains the password which represents the solution at each level in the game.
 
 
 * item        Level 0 - SSH Login.
