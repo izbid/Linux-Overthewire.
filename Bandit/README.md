@@ -1,18 +1,18 @@
 The Bandit wargame, found at : https://overthewire.org/wargames/bandit/
 
-The files numbered 0,1,2 etc contains the <password> which represents the solution at each level in the game.
+The files numbered 0,1,2 etc contains the (password) which represents the solution at each level in the game.
 
 The command for writing the password into the files:
 
-- echo <password> > <digit>
+- echo (password)  (digit)
 
 The command for reading these files:
 
-- sshpass -p $(cat digit) ssh bandit<n>@bandits.labs.overthewire.org -p 2220
+- sshpass -p $(cat digit) ssh bandit(n)@bandits.labs.overthewire.org -p 2220
 
-<password>  : The solution at each level
-<digit>     : Numerical value used as file-name
-<n>         : Current level in the game
+(password)  : The solution at each level
+(digit)     : Numerical value used as file-name
+(n)         : Current level in the game
 
 
 
