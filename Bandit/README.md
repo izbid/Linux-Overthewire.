@@ -1,19 +1,41 @@
 The Bandit wargame, found at : https://overthewire.org/wargames/bandit/
 
-The files numbered 0,1,2 etc contains the password which represents the solution at each level in the game.
+The files numbered 0,1,2 etc contains the <password> which represents the solution at each level in the game.
+
+The command for writing the password into the files:
+
+- echo <password> > <digit>
+
+The command for reading these files:
+
+- sshpass -p $(cat digit) ssh bandit<n>@bandits.labs.overthewire.org -p 2220
+
+<password>  : The solution at each level
+<digit>     : Numerical value used as file-name
+<n>         : Current level in the game
 
 
-* item        Level 0 - SSH Login.
-* item        Level 1 - Read a File.
-* item        Level 2 - Unusually named Files.
-* item        Level 3 - Spaces in a filename.
-* item        Level 4 - Hidden Files.
-* item        Level 5 - File types, specifically human-readable files.
-* item        Level 6 - Human-readable files, file sizes and non-executable files.
-* item        Level 7 - Find a file with specific user and group ownership.
-* item        Level 8 - Learning grep and piping.
-* item        Level 9 - Linux command uniq and sort, to find lines only appearing once.
-* item        Level 10 - The ‘strings’ command. Find human-readable strings in a file.
+
+
+
+| Level    | Description                                                     | Commands                                                                                             |
+|----------|-----------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| 0        | SSH Login                                                       |                                                                                                      |
+| Level 1  | Read a File                                                     | cat readme                                                                                           |
+| Level 2  | Unusually named Files                                           | cat ./-                                                                                              |
+| Level 3  | Spaces in a filename                                            | cat 'Spaces in a filename'                                                                           |
+| Level 4  | Hidden Files                                                    | ls -al \| cat .hidden                                                                                |
+| Level 5  | File types, specifically human-readable files.                  | for i in $(ls); do file ./$i; done    cat ./-file07                                                  |
+| Level 6  | Human-readable files, file sizes and non-executable files       | find . -readable -size 1033c -not -executable ;  cat ./inhere/maybehere07/.file2                     |
+| Level 7  | Find a file with specific user and group ownership              | find / -user bandit7 -group bandit6 -size 33c 2>/dev/null ;  cat /var/lib/dpkg/info/bandit7.password |
+| Level 8  | Learning grep and piping                                        | cat data.txt \| grep 'millionth'                                                                     |
+| Level 9  | Linux command uniq and sort, to find lines only appearing once. | cat data.txt \| sort \|uniq -c \| grep -v 10                                                         |
+| Level 10 | The ‘strings’ command. Find human-readable strings in a file    | strings data.txt \| grep =                                                                           |
+|          |                                                                 |                                                                                                      |
+|          |                                                                 |                                                                                                      |
+|          |                                                                 |                                                                                                      |
+
+
 * item        Level 11 - Base64.
 * item        Level 12 - Rot13 substitution cipher as Linux command with ’tr’.
 * item        Level 13 - Hexdumps and compression and file signatures.
