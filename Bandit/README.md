@@ -8,7 +8,7 @@ The command for writing the password into the files:
 
 The command for reading these files:
 
-- sshpass -p $(cat digit) ssh bandit(n)@bandits.labs.overthewire.org -p 2220
+- sshpass -p $(cat digit) ssh bandit(n)@bandit.labs.overthewire.org -p 2220
 
 (password)  : The solution at each level
 (digit)     : Numerical value used as file-name
