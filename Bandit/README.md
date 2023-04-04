@@ -37,12 +37,12 @@ The command for reading these files:
 | Level 14 | SSH Login with key and transferring files from a remote host    | ssh bandit14@localhost -p 2220 -i sshkey.private ; cd /etc/bandit_pass/bandit14                           |
 | Level 15 | Netcat and first network communication                          | nc localhost 30000                                                                                        |
 | Level 16 | OpenSSL, secure communication                                   | openssl s_client -connect localhost:30001                                                                 |
-| Level 17 |                                                                 |                                                                                                           |
+| Level 17 |Port and Service Scanning with Nmap and SSL repetition.                                                                 |                                                                                                           |
 |          |                                                                 |                                                                                                           |
 
 
 
-* item        Level 17 - Port and Service Scanning with Nmap and SSL repetition.
+
 * item        Level 18 - Find differences in a file.
 * item        Level 19 - Advanced SSH, remote command execution.
 * item        Level 20 - Suid and linux permissions.
