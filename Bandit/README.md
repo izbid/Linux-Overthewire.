@@ -1,4 +1,4 @@
-This repo contains solution to the Bandit wargame found at : https://overthewire.org/wargames/bandit
+#### This repo contains solution to the Bandit wargame found at : https://overthewire.org/wargames/bandit
 
 The files numbered 0,1,2 etc contains the (password) which represents the solution at each level in the game.
 
