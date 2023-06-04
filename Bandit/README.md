@@ -4,7 +4,7 @@ The files numbered 0,1,2 etc contains the (password) which represents the soluti
 
 The command for writing the password into the files:
 
-- **echo (password)  (digit)**
+- **echo (password) > (digit)**
 
 The command for reading these files:
 
@@ -20,32 +20,41 @@ The command for reading these files:
 
 | Level    | Description                                                     | Commands                                                                                                  |
 |----------|-----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| 0        | SSH Login                                                       |                                                                                                           |
-| Level 1  | Read a File                                                     | cat readme                                                                                                |
-| Level 2  | Unusually named Files                                           | cat ./-                                                                                                   |
-| Level 3  | Spaces in a filename                                            | cat 'Spaces in a filename'                                                                                |
-| Level 4  | Hidden Files                                                    | ls -al \| cat .hidden                                                                                     |
-| Level 5  | File types, specifically human-readable files.                  | for i in $(ls); do file ./$i; done    cat ./-file07                                                       |
-| Level 6  | Human-readable files, file sizes and non-executable files       | find . -readable -size 1033c -not -executable ;  cat ./inhere/maybehere07/.file2                          |
-| Level 7  | Find a file with specific user and group ownership              | find / -user bandit7 -group bandit6 -size 33c 2>/dev/null ;  cat /var/lib/dpkg/info/bandit7.password      |
-| Level 8  | Learning grep and piping                                        | cat data.txt \| grep 'millionth'                                                                          |
-| Level 9  | Linux command uniq and sort, to find lines only appearing once. | cat data.txt \| sort \|uniq -c \| grep -v 10                                                              |
-| Level 10 | The ‘strings’ command. Find human-readable strings in a file    | strings data.txt \| grep =                                                                                |
-| Level 11 | Base64                                                          | cat data.txt \| base64 -d                                                                                 |
-| Level 12 | Rot13 substitution cipher as Linux command with ’tr’            | Use Rot13.com to decode the password                                                                      |
-| Level 13 | Hexdumps and compression and file signatures.                   | xxd -r data.txt; Use gzip,bzip2 and tar to decompress resulting files until you get a  an ASCII text file |
-| Level 14 | SSH Login with key and transferring files from a remote host    | ssh bandit14@localhost -p 2220 -i sshkey.private ; cd /etc/bandit_pass/bandit14                           |
-| Level 15 | Netcat and first network communication                          | nc localhost 30000                                                                                        |
-| Level 16 | OpenSSL, secure communication                                   | openssl s_client -connect localhost:30001                                                                 |
-| Level 17 |Port and Service Scanning with Nmap and SSL repetition.                                                                 |                                                                                                           |
+| 1        | SSH Login                                                       |                                                                                                           |
+| Level 2  | Read a File                                                     | cat readme                                                                                                |
+| Level 3  | Unusually named Files                                           | cat ./-                                                                                                   |
+| Level 4  | Spaces in a filename                                            | cat 'Spaces in a filename'                                                                                |
+| Level 5  | Hidden Files                                                    | ls -al \| cat .hidden                                                                                     |
+| Level 6  | File types, specifically human-readable files.                  | for i in $(ls); do file ./$i; done    cat ./-file07                                                       |
+| Level 7  | Human-readable files, file sizes and non-executable files       | find . -readable -size 1033c -not -executable ;  cat ./inhere/maybehere07/.file2                          |
+| Level 8  | Find a file with specific user and group ownership              | find / -user bandit7 -group bandit6 -size 33c 2>/dev/null ;  cat /var/lib/dpkg/info/bandit7.password      |
+| Level 9  | Learning grep and piping                                        | cat data.txt \| grep 'millionth'                                                                          |
+| Level 10 | Linux command uniq and sort, to find lines only appearing once. | cat data.txt \| sort \|uniq -c \| grep -v 10                                                              |
+| Level 11 | The ‘strings’ command. Find human-readable strings in a file    | strings data.txt \| grep =                                                                                |
+| Level 12 | Base64                                                          | cat data.txt \| base64 -d                                                                                 |
+| Level 13 | Rot13 substitution cipher as Linux command with ’tr’            | Use Rot13.com to decode the password                                                                      |
+| Level 14 | Hexdumps and compression and file signatures.                   | xxd -r data.txt; Use gzip,bzip2 and tar to decompress resulting files until you get a  an ASCII text file |
+| Level 15 | SSH Login with key and transferring files from a remote host    | ssh bandit14@localhost -p 2220 -i sshkey.private ; cd /etc/bandit_pass/bandit14                           |
+| Level 16 | Netcat and first network communication                          | nc localhost 30000                                                                                        |
+| Level 17 | OpenSSL, secure communication                                   | openssl s_client -connect localhost:30001                                                                 |
+| Level 18 | Find differences in a file.                                     | diff passwords.old passwords.                                                                             |
+| Level 19 | Advanced SSH, remote command execution.                         | sshpass -p $(cat 18) ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme                          |
+| Level 20 | Suid and linux permissions.                                     | ./bandit20-do cat /etc/bandit_pass/bandit20                                                               |
 |          |                                                                 |                                                                                                           |
-
+|          |                                                                 |                                                                                                           |
+|          |                                                                 |                                                                                                           |
+|          |                                                                 |                                                                                                           |
+|          |                                                                 |                                                                                                           |
+|          |                                                                 |                                                                                                           |
+|          |                                                                 |                                                                                                           |
+|          |                                                                 |                                                                                                           |
+|          |                                                                 |                                                                                                           |
 
 
 
 * item        Level 18 - Find differences in a file.
 * item        Level 19 - Advanced SSH, remote command execution.
-* item        Level 20 - Suid and linux permissions.
+* item        git- Suid and linux permissions.
 * item        Level 21 - Setuid binary, netcat and background processes/jobs.
 * item        Level 22 - Cronjobs.
 * item        Level 23 - Cronjobs.
