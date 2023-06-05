@@ -1,2 +1,2 @@
 #### Master Linux via Gaming.
- The repo contains my solution to the popular Linux game series [overthewire.org] (OverTheWire)
+ In this repository are my solutions to the popular Linux game series [OverTheWire](https://overthewire.org)
