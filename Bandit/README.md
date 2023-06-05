@@ -4,14 +4,14 @@ The files numbered 0,1,2 etc contains the (password) which represents the soluti
 
 The command for writing the password into the files:
 
-- **echo (password) > (digit)**
+- **echo <password) > (digit)**
 
-The command for reading these files:
+The command for using these password files to ssh into the remote server:
 
 - **sshpass -p $(cat digit) ssh bandit(n)@bandit.labs.overthewire.org -p 2220**
 
 (password)  : The solution at each level
-(digit)     : Numerical value used as file-name
+ digit      : Numerical value used as file-name
 (n)         : Current level in the game
 
 
