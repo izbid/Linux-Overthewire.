@@ -44,11 +44,12 @@ The command for using these password files to ssh into the remote server:
 | Level 25 | Brute-forcing with bash scripting and netcat.                               | https://mayadevbe.me/posts/overthewire/bandit/level25/                                                            |
 | Level 26 | Breaking out of a restricted environment with more and vim.                 | https://mayadevbe.me/posts/overthewire/bandit/level26/                                                            |
 | Level 27 | Breaking out of a restricted environment with more and vim and SUID Binary. | https://mayadevbe.me/posts/overthewire/bandit/level27/                                                            |
+| Level 28 | Git introduction and basics.                                                | https://mayadevbe.me/posts/overthewire/bandit/level28/                                                            |
+| Level 29 | Git history.                                                                | https://mayadevbe.me/posts/overthewire/bandit/level29/                                                            |
+| Level 30 | Git Branching Basics.                                                       | https://mayadevbe.me/posts/overthewire/bandit/level30/                                                            |
 |          |                                                                             |                                                                                                                   |
 |          |                                                                             |                                                                                                                   |
-* item        Level 28 - Git introduction and basics.
-* item        Level 29 - Git history.
-* item        Level 30 - Git Branching Basics.
+|          |                                                                             |                                                                                                                   |
 * item        Level 31 - Git Tagging.
 * item        Level 32 - Git Push, Commit, Ignore, Add.
 * item        Level 33 - Linux Variables and shell escape.
